@@ -1,7 +1,11 @@
 from argparse import ArgumentParser
+import os
+import sys
 
 from tasks import read_tasks, update_tasks
 from timesheet import clock_in, clock_out, is_clocked_in, read_timesheet
+
+os.chdir(sys.path[0])
 
 tasks = read_tasks()
 
